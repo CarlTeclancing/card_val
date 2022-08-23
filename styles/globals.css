@@ -28,8 +28,7 @@ a {
   display: flex;
   width: 100%;
   height: auto;
-  justify-content: center;
-  align-items: center;
+  
   flex-direction: row;
 }
 .main{
@@ -40,7 +39,6 @@ a {
   height: 200px;
   width: 340px;
   background-color: red;
-  margin: 10px;
   border-radius: 12px;
   padding: 10px;
   color: white;
@@ -52,6 +50,7 @@ a {
   background: url('../public/images/bg-card-front.png');
   background-size: cover;
   background-position: center;
+
 }
 .card-back{
   top: 300px;
@@ -98,6 +97,9 @@ button:hover{
   height: 100vh;
   background-color: red;
   background: url('../public/images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .right-section{
   width: 900px;
@@ -135,4 +137,123 @@ h2{
   right: 30px;
   font-size: 1.2rem;
   font-weight: bold;
+}
+@media screen and (max-width: 840px) {
+  .wrapper{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  }
+  .main{
+    position: relative;
+  }
+  .card-front, .card-back{
+    position: absolute;
+    height: 170px;
+    width: 300px;
+    background-color: red;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.377);
+  }
+  .card-front{
+    top: 10px;
+    left: 60px;
+    background: url('../public/images/bg-card-front.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .card-back{
+    top: 100px;
+    left: 10px;
+    background: url('../public/images/bg-card-back.png');
+    background-size: cover;
+    background-position: center;
+  }
+  form{
+    width: 350px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgba(128, 128, 128, 0.808);
+    margin-top: 140px;
+    padding: 15px;
+    border-radius: 18px;
+  }
+  input{
+    height: 50px;
+    width: 95%;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  button{
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+  }
+  button:hover{
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .left-section{
+    width: 100%;
+    height: 200px;
+    background-color: red;
+    background: url('../public/images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .right-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  label{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding-top: 10px;
+  }
+  .date-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  h2{
+    color: white;
+    letter-spacing: 3px;
+    font-weight:400;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .span{
+    position: absolute;
+    top: 42%;
+    right: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
